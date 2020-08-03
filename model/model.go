@@ -13,8 +13,10 @@ import (
 	"hello-students/config"
 )
 
+// DB
 var DB *gorm.DB
 
+// InitModel
 func InitModel() {
 	db, err := gorm.Open(config.DatabaseConfig.Type,
 		fmt.Sprintf(
@@ -35,10 +37,10 @@ func InitModel() {
 }
 
 func setTable() {
-	if DB.HasTable(&Student{}) {
-		DB.AutoMigrate(&Student{})
+	if DB.HasTable(&Visitor{}) {
+		DB.AutoMigrate(&Visitor{})
 	} else {
-		DB.CreateTable(&Student{})
+		DB.CreateTable(&Visitor{})
 	}
 }
 

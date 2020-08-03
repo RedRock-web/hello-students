@@ -21,3 +21,19 @@ var DatabaseConfig = databaseConfig{
 	Host:     "127.0.0.1",
 	Port:     3306,
 }
+
+type visitorConfig struct {
+	All           int
+	MaleNumber    int
+	FemaleNumber  int
+	MalePercent   string
+	FemalePercent string
+}
+
+var VisitorConfig = visitorConfig{
+	All:           10000,
+	MaleNumber:    4000,
+	FemaleNumber:  6000,
+	MalePercent:   "40.00%",
+	FemalePercent: "60.00%",
+}

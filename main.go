@@ -5,8 +5,10 @@ package main
 
 import (
 	"hello-students/model"
+	"hello-students/router"
 )
 
 func main() {
 	model.InitModel()
+	router.InitRouter()
 }
