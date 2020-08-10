@@ -28,8 +28,8 @@ func setupRouter(r *gin.Engine) {
 	// log record，解决跨域
 	r.Use(middleware.Cors())
 
-	r.GET("/api/visitor", handler.Visitors)
-	r.GET("/api/college")
-	r.GET("/api/dorm")
+	r.GET("/api/visitor", handler.Visitor)
+	r.GET("/api/college", handler.College)
+	r.GET("/api/dorm", handler.Dorm)
 	r.GET("/api/canteen")
 }

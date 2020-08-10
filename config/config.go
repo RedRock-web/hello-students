@@ -14,7 +14,7 @@ type databaseConfig struct {
 
 // DatabaseConfig 用于数据库连接
 var DatabaseConfig = databaseConfig{
-	Name:     "cloud_disk",
+	Name:     "hello_student",
 	Type:     "mysql",
 	User:     "root",
 	Password: "mima",
@@ -22,18 +22,23 @@ var DatabaseConfig = databaseConfig{
 	Port:     3306,
 }
 
-type visitorConfig struct {
-	All           int
-	MaleNumber    int
-	FemaleNumber  int
-	MalePercent   string
-	FemalePercent string
+type cookieConfig struct {
+	Name     string
+	Value    string
+	MaxAge   int
+	Path     string
+	Domain   string
+	Secure   bool
+	HttpOnly bool
 }
 
-var VisitorConfig = visitorConfig{
-	All:           10000,
-	MaleNumber:    4000,
-	FemaleNumber:  6000,
-	MalePercent:   "40.00%",
-	FemalePercent: "60.00%",
+// CookieConfig
+var CookieConfig = cookieConfig{
+	Name:     "soidfjosd",
+	Value:    "",
+	Domain:   "localhost:8080",
+	Path:     "/",
+	MaxAge:   10000,
+	Secure:   false,
+	HttpOnly: true,
 }
