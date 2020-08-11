@@ -19,4 +19,13 @@ func Dorm(c *gin.Context) {
 		return
 	}
 
+	pictures := service.GetDormPictures(d.Name)
+	configuration := service.GetDormConfiguration(d.Name)
+
+	data := gin.H{
+		"pictures":      pictures,
+		"configuration": configuration,
+	}
+
+	response.OkWithData(c, data)
 }

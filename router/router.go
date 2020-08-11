@@ -31,5 +31,5 @@ func setupRouter(r *gin.Engine) {
 	r.GET("/api/visitor", handler.Visitor)
 	r.GET("/api/college", handler.College)
 	r.GET("/api/dorm", handler.Dorm)
-	r.GET("/api/canteen")
+	r.GET("/api/canteen", handler.Canteen)
 }
