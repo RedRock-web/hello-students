@@ -14,8 +14,7 @@ type canteenData struct {
 }
 
 var canteen = map[string]canteenData{
-	// 中心食堂
-	"zxst": {
+	"中心食堂": {
 		Pictures: []string{
 			"http://cdn.redrock.team/hello-student_zxst0.jpg",
 			"http://cdn.redrock.team/hello-student_zxst1.jpg",
@@ -24,8 +23,7 @@ var canteen = map[string]canteenData{
 		},
 		Introduction: "中心食堂与雨红莲广场相邻，位于学校的中心且菜式整体价格较低、种类繁多，小面深得同学们的喜爱",
 	},
-	// 大西北食堂
-	"dxb": {
+	"大西北": {
 		Pictures: []string{
 			"http://cdn.redrock.team/hello-student_dxb0.jpg",
 			"http://cdn.redrock.team/hello-student_dxb1.jpg",
@@ -33,8 +31,7 @@ var canteen = map[string]canteenData{
 		},
 		Introduction: "大西北食堂在中心食堂的背面，食堂空间较少，提供的菜式以清真食物为主。如果你想品尝西北美食，大西北是一个不错的选择。",
 	},
-	// 兴业苑食堂
-	"yxyst": {
+	"兴业苑食堂": {
 		Pictures: []string{
 			"http://cdn.redrock.team/hello-student_yxyst0.jpg",
 			"http://cdn.redrock.team/hello-student_yxyst1.jpg",
@@ -42,8 +39,7 @@ var canteen = map[string]canteenData{
 		},
 		Introduction: "兴业苑食堂与中心食堂一样，是老一派的食堂。菜式种类繁多，价格较低。食堂的小面、三鲜米线广受好评。",
 	},
-	// 红高粱食堂
-	"hgl": {
+	"红高粱": {
 		Pictures: []string{
 			"http://cdn.redrock.team/hello-student_hgl0.jpg",
 			"http://cdn.redrock.team/hello-student_hgl1.png",
@@ -51,8 +47,7 @@ var canteen = map[string]canteenData{
 		},
 		Introduction: "红高粱是重邮地理位置最高的食堂，也是最好的食堂之一。食堂大而整洁。特色食物：石溪米线、肠粉",
 	},
-	// 千喜鹤食堂
-	"qxh": {
+	"千喜鹤": {
 		Pictures: []string{
 			"http://cdn.redrock.team/hello-student_qxh0.jpg",
 			"http://cdn.redrock.team/hello-student_qxh1.png",
@@ -60,8 +55,7 @@ var canteen = map[string]canteenData{
 		},
 		Introduction: "千喜鹤食堂是知名网红食堂，食堂装修豪华而富有文艺气息，提供的美食种类很多且独特：蛋糕、奶茶、炸鸡、烧腊。",
 	},
-	// 延生食堂
-	"ysst": {
+	"延生食堂": {
 		Pictures: []string{
 			"http://cdn.redrock.team/hello-student_ysst0.jpg",
 			"http://cdn.redrock.team/hello-student_ysst1.jpg",
@@ -70,8 +64,7 @@ var canteen = map[string]canteenData{
 		},
 		Introduction: "延生食堂在学校的口碑很好，食物很有特色：铁板炒饭、小炒、冒菜，深受同学们的好评。",
 	},
-	// 樱花食堂
-	"yhst": {
+	"樱花食堂": {
 		Pictures: []string{
 			"http://cdn.redrock.team/hello-student_yhst0.jpg",
 			"http://cdn.redrock.team/hello-student_yhst1.jpg",

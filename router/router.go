@@ -12,6 +12,7 @@ import (
 	"hello-students/router/middleware"
 )
 
+// InitRouter 初始化路由
 func InitRouter() {
 	r := gin.Default()
 
@@ -21,9 +22,9 @@ func InitRouter() {
 	if err != nil {
 		log.Fatalf("failed to init router")
 	}
-
 }
 
+// setupRouter 设置路由
 func setupRouter(r *gin.Engine) {
 	// log record，解决跨域
 	r.Use(middleware.Cors())
@@ -32,4 +33,6 @@ func setupRouter(r *gin.Engine) {
 	r.GET("/api/college", handler.College)
 	r.GET("/api/dorm", handler.Dorm)
 	r.GET("/api/canteen", handler.Canteen)
+	r.GET("/api/expand", handler.Expand)
+	r.GET("/api/link", handler.Link)
 }
