@@ -5,7 +5,7 @@ package service
 
 // CanteenForm
 type CanteenForm struct {
-	Name string
+	Name string `form:"name" binding:"required"`
 }
 
 type canteenData struct {

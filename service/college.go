@@ -5,8 +5,8 @@ package service
 
 // CollegeForm
 type CollegeForm struct {
-	Region string `json:"region"`
-	Name   string `json:"name"`
+	Region string `form:"region" binding:"required"`
+	Name   string `form:"name" binding:"required"`
 }
 
 var majorToCollege = map[string]string{

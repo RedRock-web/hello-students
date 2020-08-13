@@ -14,7 +14,7 @@ import (
 func Expand(c *gin.Context) {
 	var e service.ExpandForm
 
-	if err := c.ShouldBindJSON(&e); err != nil {
+	if err := c.ShouldBind(&e); err != nil {
 		response.FormError(c)
 		return
 	}

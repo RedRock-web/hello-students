@@ -4,10 +4,11 @@
 package handler
 
 import (
-	"log"
+	"encoding/json"
 
 	"github.com/gin-gonic/gin"
 
+	"hello-students/log"
 	"hello-students/router/response"
 	"hello-students/service"
 )
@@ -16,7 +17,7 @@ import (
 func Visitor(c *gin.Context) {
 	var v service.VisitorForm
 
-	if err := c.ShouldBindJSON(&v); err != nil {
+	if err := c.ShouldBind(&v); err != nil {
 		response.FormError(c)
 		return
 	}
@@ -25,14 +26,18 @@ func Visitor(c *gin.Context) {
 
 	err := service.AddVisitor(v)
 	if err != nil {
-		log.Printf("faield to add visitor:%s", err)
+		log.Begin().Infof("faield to add visitor:%s", err)
 	}
 
 	number, err := service.GetVisitorsNumber()
 	if err != nil {
-		log.Printf("faield to get visitor number:%s", err)
+		log.Begin().Infof("faield to get visitor number:%s", err)
 		return
 	}
+
+	j, _ := json.Marshal(v)
+
+	log.Begin().Infof(string(j))
 
 	collegeName := service.GetCollegeName(v.Major)
 

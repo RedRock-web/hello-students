@@ -9,10 +9,10 @@ import (
 
 // VisitorForm
 type VisitorForm struct {
-	Gender string `json:"gender"`
-	Region string `json:"region"`
-	Major  string `json:"major"`
-	Ip     string `json:"ip"`
+	Gender string `form:"gender" binding:"required"`
+	Region string `form:"region" binding:"required"`
+	Major  string `form:"major" binding:"required"`
+	Ip     string `form:"ip"`
 }
 
 // GetVisitorsNumber

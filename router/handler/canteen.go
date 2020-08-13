@@ -14,7 +14,7 @@ import (
 func Canteen(c *gin.Context) {
 	var cf service.CanteenForm
 
-	if err := c.ShouldBindJSON(&cf); err != nil {
+	if err := c.ShouldBind(&cf); err != nil {
 		response.FormError(c)
 		return
 	}

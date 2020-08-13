@@ -14,7 +14,7 @@ import (
 func Dorm(c *gin.Context) {
 	var d service.DormForm
 
-	if err := c.ShouldBindJSON(&d); err != nil {
+	if err := c.ShouldBind(&d); err != nil {
 		response.FormError(c)
 		return
 	}

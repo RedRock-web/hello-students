@@ -14,7 +14,7 @@ import (
 func College(c *gin.Context) {
 	var cf service.CollegeForm
 
-	if err := c.ShouldBindJSON(&cf); err != nil {
+	if err := c.ShouldBind(&cf); err != nil {
 		response.FormError(c)
 		return
 	}

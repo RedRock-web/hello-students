@@ -5,7 +5,7 @@ package service
 
 // DormForm
 type DormForm struct {
-	Name string
+	Name string `form:"name" binding:"required"`
 }
 
 type dormData struct {

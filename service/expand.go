@@ -5,7 +5,7 @@ package service
 
 // ExpandForm
 type ExpandForm struct {
-	Name string
+	Name string `form:"name" binding:"required"`
 }
 
 type expandData struct {

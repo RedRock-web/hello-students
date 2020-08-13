@@ -19,7 +19,7 @@ func InitRouter() {
 
 	err := r.Run()
 	if err != nil {
-		log.Begin().Fatalf("failed to init router")
+		log.Begin().Fatalf("failed to init router:%s", err)
 	}
 }
 

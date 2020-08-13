@@ -1,5 +1,2 @@
-{"level":"info","msg":"| 200 |    2.575436ms |       127.0.0.1 | GET | /api/visitor |","time":"2020-08-13 18:26:46"}
-{"level":"info","msg":"| 200 |       77.53µs |       127.0.0.1 | GET | /api/college |","time":"2020-08-13 18:27:05"}
-{"level":"info","msg":"| 200 |      52.082µs |       127.0.0.1 | GET | /api/dorm |","time":"2020-08-13 18:27:12"}
-{"level":"info","msg":"| 200 |      47.917µs |       127.0.0.1 | GET | /api/canteen |","time":"2020-08-13 18:27:16"}
-{"level":"info","msg":"| 200 |      29.802µs |       127.0.0.1 | GET | /api/link |","time":"2020-08-13 18:27:18"}
+{"file":"/home/edte/go/src/hello-students/router/handler/visitor.go:40","func":"hello-students/router/handler.Visitor","level":"info","msg":"{\"Gender\":\"男\",\"Region\":\"江苏\",\"Major\":\"数字媒体技术\",\"Ip\":\"127.0.0.1\"}","time":"2020-08-13 22:01:57"}
+{"level":"info","msg":"| 200 |    2.881762ms |       127.0.0.1 | GET | /api/visitor?gender=%E7%94%B7\u0026region=%E6%B1%9F%E8%8B%8F\u0026major=%E6%95%B0%E5%AD%97%E5%AA%92%E4%BD%93%E6%8A%80%E6%9C%AF |","time":"2020-08-13 22:01:57"}
