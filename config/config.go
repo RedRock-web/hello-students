@@ -65,11 +65,4 @@ func InitConfig() {
 	if err != nil {
 		log.Fatalf("failed init log file")
 	}
-
-	err = os.Mkdir("tmp/", 0777)
-	if os.IsExist(err) {
-		os.Remove("tmp")
-		os.Mkdir("tmp/", 0777)
-	}
-	log.Println(err)
 }
