@@ -5,12 +5,12 @@ package model
 
 import (
 	"fmt"
-	"log"
 
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
 
 	"hello-students/config"
+	"hello-students/log"
 )
 
 // DB
@@ -28,7 +28,7 @@ func InitModel() {
 			config.DatabaseConfig.Name))
 
 	if err != nil {
-		log.Fatalf("failed to connect database:%v", err)
+		log.Begin().Fatalf("failed to connect database:%v", err)
 	}
 
 	DB = db

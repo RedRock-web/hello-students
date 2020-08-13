@@ -4,11 +4,13 @@
 package main
 
 import (
+	"hello-students/config"
 	"hello-students/model"
 	"hello-students/router"
 )
 
 func main() {
+	config.InitConfig()
 	model.InitModel()
 	router.InitRouter()
 }

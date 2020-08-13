@@ -44,6 +44,8 @@ func Visitor(c *gin.Context) {
 
 	genderDesc := service.GetRandomGenderDescription(v.Gender)
 
+	allNumber := service.GetAllNumber()
+
 	data := gin.H{
 		"college":         collegeName,
 		"region":          v.Region,
@@ -52,6 +54,7 @@ func Visitor(c *gin.Context) {
 		"gender":          genderDesc,
 		"gender_number":   genderNumber,
 		"visitors_number": number,
+		"total_number":    allNumber,
 	}
 
 	response.OkWithData(c, data)

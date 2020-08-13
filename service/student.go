@@ -21,8 +21,8 @@ var student = studentData{
 	allNumber:     10000,
 	maleNumber:    4000,
 	femaleNumber:  6000,
-	malePercent:   "40.00%",
-	femalePercent: "60.00%",
+	malePercent:   "40.00",
+	femalePercent: "60.00",
 	regions: map[string]int{
 		"北京":  20,
 		"天津":  20,
@@ -67,6 +67,11 @@ func GetGenderNumber(c string) int {
 		return student.maleNumber
 	}
 	return student.femaleNumber
+}
+
+// GetAllNumber
+func GetAllNumber() int {
+	return student.allNumber
 }
 
 // GetGenderRatio

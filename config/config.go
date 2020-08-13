@@ -3,6 +3,11 @@
 // @create: 2020-08-02 23:11
 package config
 
+import (
+	"log"
+	"os"
+)
+
 type databaseConfig struct {
 	Name     string
 	Type     string
@@ -41,4 +46,30 @@ var CookieConfig = cookieConfig{
 	MaxAge:   10000,
 	Secure:   false,
 	HttpOnly: true,
+}
+
+type logFileConfig struct {
+	Path string
+	Name string
+}
+
+// LogFileConfig 用于存日志信息
+var LogFileConfig = logFileConfig{
+	Path: "",
+	Name: "log.txt",
+}
+
+// InitConfig
+func InitConfig() {
+	_, err := os.Create(LogFileConfig.Path + LogFileConfig.Name)
+	if err != nil {
+		log.Fatalf("failed init log file")
+	}
+
+	err = os.Mkdir("tmp/", 0777)
+	if os.IsExist(err) {
+		os.Remove("tmp")
+		os.Mkdir("tmp/", 0777)
+	}
+	log.Println(err)
 }
