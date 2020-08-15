@@ -916,7 +916,7 @@ var majorToRegions = map[string][]string{
 		"宁夏",
 		"新疆",
 	},
-	"外国语言文学类.xlsx": []string{
+	"外国语言文学类": []string{
 		"河北",
 		"吉林",
 		"江苏",
